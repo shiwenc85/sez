@@ -1,0 +1,59 @@
+@media(max-width:1080px) {
+    .carusel, .head-anis{
+        display: none;
+    }
+    #head {
+        width: 100%;
+        min-height: 90vh;
+        background: url(./網頁設計-失智症素材檔/headbg1.png);
+    }
+    .head-text{
+        padding-top: 100px;
+    }
+    .head-text,
+    .new1-text,
+    .new2-text,
+    .shop-text {
+        padding-left: 0;
+        padding: 10px;
+    }
+
+    .me-text::before {
+        display: block;
+    }
+
+    .one,
+    .one2 {
+        width: 400px;
+    }
+
+    .party-text1,
+    .party-text2,
+    .party-text3 {
+        margin-bottom: 20px;
+    }
+
+    .shop-text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .shopobjs {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .call-text {
+        height: 91vh;
+        left: 50px;
+    }
+}
+
+@media (max-width:600px) {
+    .me-text::before {
+        display: none;
+    }
+}

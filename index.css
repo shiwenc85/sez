@@ -1,0 +1,671 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+span {
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg1g--);
+}
+
+:root {
+    --bg1g--: #15c9b4;
+    --bg2p--: #ffaf01;
+    --bg3w--: #fff;
+    --bg4g--: #30a194;
+}
+
+.df {
+    display: flex;
+}
+
+.fd {
+    flex-direction: column;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcs {
+    justify-content: start;
+}
+
+.jce {
+    justify-content: end;
+}
+
+.aic {
+    align-items: center;
+}
+
+.fw {
+    font-weight: bold;
+}
+
+.lh {
+    line-height: 1.9;
+}
+
+.w {
+    color: #fff;
+}
+
+.lp {
+    letter-spacing: 1.2px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 70px;
+
+}
+
+.text {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 1.9;
+}
+
+.txt {
+    font-size: 55px;
+}
+
+.txt2 {
+    font-size: 40px;
+}
+
+.txt3 {
+    font-size: 26px;
+}
+
+/* tool */
+.navbar-icon {
+    width: 20px;
+}
+
+/* head */
+#head {
+    width: 100%;
+    min-height: 75vh;
+    /* background: #0e7f72; */
+    position: relative;
+}
+
+.head-anis img {
+    width: 250px;
+    height: 550px;
+    border-radius: 500px;
+    object-fit: cover;
+    border: #15c9b4 10px solid;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    left: 0;
+    top: 0;
+    clip-path: inset(0);
+    z-index: -1;
+}
+
+.head-bg {
+    width: 100%;
+    position: fixed;
+}
+
+.head-text {
+    padding-left: 200px;
+}
+
+.ani1 {
+    animation: ani1 2s linear infinite;
+}
+
+@keyframes ani1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12%);
+    }
+
+    0% {
+        transform: translateY(0);
+    }
+}
+
+.ani2 {
+    animation: ani2 2s linear infinite;
+}
+
+@keyframes ani2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12%);
+    }
+
+    0% {
+        transform: translateY(0);
+    }
+}
+
+/* light */
+#light {
+    width: 100%;
+    min-height: 10vh;
+    background: var(--bg2p--);
+    overflow: hidden;
+}
+
+.icon li {
+    background: url(./網頁設計-失智症素材檔/logolight.png)no-repeat center/cover;
+    min-width: calc(114%/6);
+    list-style: none;
+    padding-top: 100px;
+    margin: 0 70px;
+}
+
+.icons {
+    min-width: 100%;
+    transform: translate(0%);
+    animation: light 25s linear infinite;
+}
+
+.icons:hover {
+    animation-play-state: paused;
+}
+
+@keyframes light {
+    100% {
+        transform: translate(-205%);
+    }
+}
+
+/* me */
+#me {
+    width: 100%;
+    min-height: 120vh;
+    background: var(--bg1g--);
+    position: relative;
+    overflow: hidden;
+}
+
+.me-text {
+    width: 730px;
+    height: 730px;
+    border-radius: 500px;
+    background: var(--bg3w--);
+    padding: 50px;
+    position: relative;
+}
+
+.me-text::before {
+    content: '';
+    position: absolute;
+    border: var(--bg2p--) 20px solid;
+    border-radius: 500px;
+    inset: -70px;
+    border-top-color: transparent;
+    animation: circle 3s linear infinite reverse;
+}
+
+
+
+@keyframes circle {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ltgd {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500px;
+}
+
+.rbgd {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+}
+
+.lt img,
+.lt2 img,
+.lt3 img,
+.rb img,
+.rb2 img,
+.rb3 img {
+    position: absolute;
+    right: 0;
+    width: 140px;
+}
+
+.lt,
+.lt2,
+.lt3 {
+    position: absolute;
+    width: 100px;
+    height: 950px;
+    left: 0;
+    bottom: 100%;
+    transform-origin: center;
+    transform: translate(-50%, 50%) rotate(60deg);
+    animation: circle2 5s linear infinite;
+}
+
+@keyframes circle2 {
+    100% {
+        transform: translate(-50%, 50%) rotate(300deg);
+    }
+}
+
+.rb,
+.rb2,
+.rb3 {
+    position: absolute;
+    width: 100px;
+    height: 950px;
+    left: 100%;
+    bottom: 0;
+    transform-origin: center;
+    transform: translate(-50%, 50%) rotate(60deg);
+    animation: circle3 7s linear infinite;
+}
+
+@keyframes circle3 {
+    100% {
+        transform: translate(-50%, 50%) rotate(-300deg);
+    }
+}
+
+.lt2,
+.rb2 {
+    animation-delay: 2s;
+}
+
+.lt3,
+.rb3 {
+    animation-delay: 1s;
+}
+
+/* new1 */
+#new1 {
+    width: 100%;
+    min-height: 75vh;
+    background: url(./網頁設計-失智症素材檔/new2.png) no-repeat center/cover fixed;
+}
+
+.new1-text {
+    padding-left: 250px;
+}
+
+.one {
+    width: 900px;
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 500px 0 0 500px;
+    border: #179b8c 10px solid;
+}
+
+.new1btn button {
+    border: #15c9b4 9px solid;
+    width: 200px;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 500px;
+    position: relative;
+    left: 100px;
+}
+
+.btn1 {
+    background: #aefff6;
+    transition: all 0.2s linear;
+}
+
+.btn1:hover {
+    background: #15c9b4;
+}
+
+.btn2 {
+    background: #ffe2a3;
+    transition: all 0.2s linear;
+}
+
+.btn2:hover {
+    background: #ffaf01;
+}
+
+/* new2 */
+#new2 {
+    width: 100%;
+    min-height: 75vh;
+    background: url(./網頁設計-失智症素材檔/new1png.png) no-repeat center/cover fixed;
+}
+
+.new2-text {
+    padding-right: 150px;
+}
+
+.one2 {
+    width: 900px;
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 0 500px 500px 0;
+    border: #179b8c 10px solid;
+}
+
+.new2btn button {
+    border: #179b8c 9px solid;
+    width: 200px;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 500px;
+    position: relative;
+    right: 100px;
+}
+
+
+/* party */
+#party {
+    width: 100%;
+    min-height: 190vh;
+    background: url(./網頁設計-失智症素材檔/partybg.png) no-repeat center/cover;
+}
+
+.party-text1 {
+    width: 100%;
+    height: 550px;
+    background: var(--bg2p--);
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 60px;
+}
+
+.party-img1 img {
+    width: 100%;
+    height: 270px;
+    border-radius: 20px;
+    border: var(--bg2p--) 10px solid;
+    object-fit: cover;
+}
+
+.party-text2 {
+    background: var(--bg2p--);
+    border-radius: 20px;
+    padding: 33px;
+}
+
+.party-text3 {
+    background: var(--bg2p--);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.party-text3 p {
+    font-size: 25px;
+    line-height: 1.9;
+    font-weight: bold;
+}
+
+.party-text3 input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* shop */
+#shop {
+    width: 100%;
+    min-height: 80vh;
+    background: url(./網頁設計-失智症素材檔/shopimg.png);
+}
+
+.shop-text {
+    padding-left: 200px;
+}
+
+.shopobjs {
+    padding-left: 200px;
+}
+
+.shop-obj img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.shop-obj {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg1g--);
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.shop-obj p {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.shop-obj button {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    box-shadow: #000000 0 7px;
+    transition: all 0.2s linear;
+}
+
+.shop-obj button:hover {
+    box-shadow: none;
+    background: #a7a7a7;
+}
+
+.shop-text button {
+    font-size: 26px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.shop-text button a {
+    text-decoration: none;
+}
+
+/* call */
+#call {
+    width: 100%;
+    min-height: 80vh;
+    background: var(--bg2p--);
+    position: relative;
+    overflow: hidden;
+}
+
+.icons2 {
+    min-width: 100%;
+    transform: translate(0%);
+    animation: light2 20s linear infinite;
+}
+
+@keyframes light2 {
+    100% {
+        transform: translate(-112%);
+    }
+}
+
+.icons2 li {
+    min-width: calc(66%/6);
+    list-style: none;
+    padding: 130px;
+    margin: 0 60px;
+}
+
+.icons2 img {
+    width: 312px;
+    height: 550px;
+    border-radius: 500px;
+    object-fit: cover;
+}
+
+.call-text {
+    width: 500px;
+    min-height: 82vh;
+    background: var(--bg1g--);
+    position: absolute;
+    left: 55%;
+    z-index: 1;
+}
+
+.call-form p {
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.call-text {
+    padding: 50px;
+}
+
+.call-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+.call-btn button {
+    width: 48%;
+    font-size: 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    box-shadow: #000000 0 5px;
+    transition: all 0.2s linear;
+}
+
+.call-btn button:hover {
+    background: #a9a9a9;
+    box-shadow: none;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    min-height: 7vh;
+    background: var(--bg1g--);
+}
+
+#footer p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+/* robot */
+.a {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 90px;
+    height: 90px;
+    background: var(--bg1g--);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.abox {
+    position: fixed;
+    bottom: 150px;
+    right: 150px;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0);
+    transition: all 0.3s;
+    transform-origin:  right bottom;
+}
+.abox.active{
+    transform: scale(1);
+}
+.abox-header,
+.abox-footer {
+    padding: 10px;
+    background: var(--bg2p--);
+}
+
+.abox-body {
+    flex: 1;
+    padding: 20px 10px;
+    overflow-y: auto;
+}
+.abox-mess{
+    background: var(--bg1g--);
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;
+    font-weight: bold;
+    display: inline-block;
+}
+.abox-mess2{
+    background: var(--bg1g--);
+    padding: 10px;
+    border-radius:10px 10px 0 10px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: auto;
+}
+.abox-footer input{
+    border-radius: 5px;
+}
+.abox-footer button{
+    border-radius: 5px;
+    font-weight: bold;
+    background: var(--bg1g--);
+}
